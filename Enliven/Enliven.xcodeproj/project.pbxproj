@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F62EC662070456300937903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC652070456300937903 /* AppDelegate.m */; };
+		9F62EC692070456300937903 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC682070456300937903 /* ViewController.m */; };
+		9F62EC6C2070456300937903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62EC6A2070456300937903 /* Main.storyboard */; };
+		9F62EC6F2070456300937903 /* Enliven.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC6D2070456300937903 /* Enliven.xcdatamodeld */; };
+		9F62EC712070456300937903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F62EC702070456300937903 /* Assets.xcassets */; };
+		9F62EC742070456300937903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62EC722070456300937903 /* LaunchScreen.storyboard */; };
+		9F62EC772070456300937903 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC762070456300937903 /* main.m */; };
+		9F62EC812070456300937903 /* EnlivenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC802070456300937903 /* EnlivenTests.m */; };
+		9F62EC8C2070456300937903 /* EnlivenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC8B2070456300937903 /* EnlivenUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F62EC7D2070456300937903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F62EC592070456300937903 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F62EC602070456300937903;
+			remoteInfo = Enliven;
+		};
+		9F62EC882070456300937903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F62EC592070456300937903 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F62EC602070456300937903;
+			remoteInfo = Enliven;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F62EC612070456300937903 /* Enliven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enliven.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F62EC642070456300937903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9F62EC652070456300937903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9F62EC672070456300937903 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9F62EC682070456300937903 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9F62EC6B2070456300937903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F62EC6E2070456300937903 /* Enliven.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Enliven.xcdatamodel; sourceTree = "<group>"; };
+		9F62EC702070456300937903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F62EC732070456300937903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F62EC752070456300937903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F62EC762070456300937903 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F62EC7C2070456300937903 /* EnlivenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnlivenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F62EC802070456300937903 /* EnlivenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnlivenTests.m; sourceTree = "<group>"; };
+		9F62EC822070456300937903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F62EC872070456300937903 /* EnlivenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnlivenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F62EC8B2070456300937903 /* EnlivenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnlivenUITests.m; sourceTree = "<group>"; };
+		9F62EC8D2070456300937903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F62EC5E2070456300937903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC792070456300937903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC842070456300937903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F62EC582070456300937903 = {
+			isa = PBXGroup;
+			children = (
+				9F62EC632070456300937903 /* Enliven */,
+				9F62EC7F2070456300937903 /* EnlivenTests */,
+				9F62EC8A2070456300937903 /* EnlivenUITests */,
+				9F62EC622070456300937903 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F62EC622070456300937903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F62EC612070456300937903 /* Enliven.app */,
+				9F62EC7C2070456300937903 /* EnlivenTests.xctest */,
+				9F62EC872070456300937903 /* EnlivenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F62EC632070456300937903 /* Enliven */ = {
+			isa = PBXGroup;
+			children = (
+				9F62EC642070456300937903 /* AppDelegate.h */,
+				9F62EC652070456300937903 /* AppDelegate.m */,
+				9F62EC672070456300937903 /* ViewController.h */,
+				9F62EC682070456300937903 /* ViewController.m */,
+				9F62EC6A2070456300937903 /* Main.storyboard */,
+				9F62EC702070456300937903 /* Assets.xcassets */,
+				9F62EC722070456300937903 /* LaunchScreen.storyboard */,
+				9F62EC752070456300937903 /* Info.plist */,
+				9F62EC762070456300937903 /* main.m */,
+				9F62EC6D2070456300937903 /* Enliven.xcdatamodeld */,
+			);
+			path = Enliven;
+			sourceTree = "<group>";
+		};
+		9F62EC7F2070456300937903 /* EnlivenTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F62EC802070456300937903 /* EnlivenTests.m */,
+				9F62EC822070456300937903 /* Info.plist */,
+			);
+			path = EnlivenTests;
+			sourceTree = "<group>";
+		};
+		9F62EC8A2070456300937903 /* EnlivenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F62EC8B2070456300937903 /* EnlivenUITests.m */,
+				9F62EC8D2070456300937903 /* Info.plist */,
+			);
+			path = EnlivenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F62EC602070456300937903 /* Enliven */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F62EC902070456300937903 /* Build configuration list for PBXNativeTarget "Enliven" */;
+			buildPhases = (
+				9F62EC5D2070456300937903 /* Sources */,
+				9F62EC5E2070456300937903 /* Frameworks */,
+				9F62EC5F2070456300937903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Enliven;
+			productName = Enliven;
+			productReference = 9F62EC612070456300937903 /* Enliven.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F62EC7B2070456300937903 /* EnlivenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F62EC932070456300937903 /* Build configuration list for PBXNativeTarget "EnlivenTests" */;
+			buildPhases = (
+				9F62EC782070456300937903 /* Sources */,
+				9F62EC792070456300937903 /* Frameworks */,
+				9F62EC7A2070456300937903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F62EC7E2070456300937903 /* PBXTargetDependency */,
+			);
+			name = EnlivenTests;
+			productName = EnlivenTests;
+			productReference = 9F62EC7C2070456300937903 /* EnlivenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F62EC862070456300937903 /* EnlivenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F62EC962070456300937903 /* Build configuration list for PBXNativeTarget "EnlivenUITests" */;
+			buildPhases = (
+				9F62EC832070456300937903 /* Sources */,
+				9F62EC842070456300937903 /* Frameworks */,
+				9F62EC852070456300937903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F62EC892070456300937903 /* PBXTargetDependency */,
+			);
+			name = EnlivenUITests;
+			productName = EnlivenUITests;
+			productReference = 9F62EC872070456300937903 /* EnlivenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F62EC592070456300937903 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kian Davoudi-Rad";
+				TargetAttributes = {
+					9F62EC602070456300937903 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9F62EC7B2070456300937903 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F62EC602070456300937903;
+					};
+					9F62EC862070456300937903 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F62EC602070456300937903;
+					};
+				};
+			};
+			buildConfigurationList = 9F62EC5C2070456300937903 /* Build configuration list for PBXProject "Enliven" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F62EC582070456300937903;
+			productRefGroup = 9F62EC622070456300937903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F62EC602070456300937903 /* Enliven */,
+				9F62EC7B2070456300937903 /* EnlivenTests */,
+				9F62EC862070456300937903 /* EnlivenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F62EC5F2070456300937903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F62EC742070456300937903 /* LaunchScreen.storyboard in Resources */,
+				9F62EC712070456300937903 /* Assets.xcassets in Resources */,
+				9F62EC6C2070456300937903 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC7A2070456300937903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC852070456300937903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F62EC5D2070456300937903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F62EC692070456300937903 /* ViewController.m in Sources */,
+				9F62EC662070456300937903 /* AppDelegate.m in Sources */,
+				9F62EC772070456300937903 /* main.m in Sources */,
+				9F62EC6F2070456300937903 /* Enliven.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC782070456300937903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F62EC812070456300937903 /* EnlivenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F62EC832070456300937903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F62EC8C2070456300937903 /* EnlivenUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F62EC7E2070456300937903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F62EC602070456300937903 /* Enliven */;
+			targetProxy = 9F62EC7D2070456300937903 /* PBXContainerItemProxy */;
+		};
+		9F62EC892070456300937903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F62EC602070456300937903 /* Enliven */;
+			targetProxy = 9F62EC882070456300937903 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F62EC6A2070456300937903 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F62EC6B2070456300937903 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F62EC722070456300937903 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F62EC732070456300937903 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F62EC8E2070456300937903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9F62EC8F2070456300937903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F62EC912070456300937903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = Enliven/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.Enliven;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F62EC922070456300937903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = Enliven/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.Enliven;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F62EC942070456300937903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = EnlivenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.EnlivenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enliven.app/Enliven";
+			};
+			name = Debug;
+		};
+		9F62EC952070456300937903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = EnlivenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.EnlivenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enliven.app/Enliven";
+			};
+			name = Release;
+		};
+		9F62EC972070456300937903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = EnlivenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.EnlivenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Enliven;
+			};
+			name = Debug;
+		};
+		9F62EC982070456300937903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z59E8EDBY;
+				INFOPLIST_FILE = EnlivenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kdr.EnlivenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Enliven;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F62EC5C2070456300937903 /* Build configuration list for PBXProject "Enliven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F62EC8E2070456300937903 /* Debug */,
+				9F62EC8F2070456300937903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F62EC902070456300937903 /* Build configuration list for PBXNativeTarget "Enliven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F62EC912070456300937903 /* Debug */,
+				9F62EC922070456300937903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F62EC932070456300937903 /* Build configuration list for PBXNativeTarget "EnlivenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F62EC942070456300937903 /* Debug */,
+				9F62EC952070456300937903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F62EC962070456300937903 /* Build configuration list for PBXNativeTarget "EnlivenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F62EC972070456300937903 /* Debug */,
+				9F62EC982070456300937903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9F62EC6D2070456300937903 /* Enliven.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9F62EC6E2070456300937903 /* Enliven.xcdatamodel */,
+			);
+			currentVersion = 9F62EC6E2070456300937903 /* Enliven.xcdatamodel */;
+			path = Enliven.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9F62EC592070456300937903 /* Project object */;
+}
