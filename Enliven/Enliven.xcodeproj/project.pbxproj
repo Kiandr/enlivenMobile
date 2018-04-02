@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1D846F2072978900643E71 /* sampleProtocolAVFoun.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D84682072978900643E71 /* sampleProtocolAVFoun.m */; };
+		9F1D84702072978900643E71 /* sampleProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D846A2072978900643E71 /* sampleProtocol.m */; };
+		9F1D84712072978900643E71 /* AccelerateProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D846B2072978900643E71 /* AccelerateProtocol.m */; };
 		9F62EC662070456300937903 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC652070456300937903 /* AppDelegate.m */; };
 		9F62EC692070456300937903 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC682070456300937903 /* ViewController.m */; };
 		9F62EC6C2070456300937903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F62EC6A2070456300937903 /* Main.storyboard */; };
@@ -16,6 +19,7 @@
 		9F62EC772070456300937903 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC762070456300937903 /* main.m */; };
 		9F62EC812070456300937903 /* EnlivenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC802070456300937903 /* EnlivenTests.m */; };
 		9F62EC8C2070456300937903 /* EnlivenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F62EC8B2070456300937903 /* EnlivenUITests.m */; };
+		9FD10A452072ADA7005F644D /* ModelQRManagerProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD10A442072ADA7005F644D /* ModelQRManagerProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F1D84662072978900643E71 /* AccelerateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerateProtocol.h; sourceTree = "<group>"; };
+		9F1D84672072978900643E71 /* MyQRManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQRManagedObject.h; sourceTree = "<group>"; };
+		9F1D84682072978900643E71 /* sampleProtocolAVFoun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleProtocolAVFoun.m; sourceTree = "<group>"; };
+		9F1D846A2072978900643E71 /* sampleProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sampleProtocol.m; sourceTree = "<group>"; };
+		9F1D846B2072978900643E71 /* AccelerateProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerateProtocol.m; sourceTree = "<group>"; };
+		9F1D846D2072978900643E71 /* sampleProtocolAVFoun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleProtocolAVFoun.h; sourceTree = "<group>"; };
+		9F1D846E2072978900643E71 /* sampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sampleProtocol.h; sourceTree = "<group>"; };
 		9F62EC612070456300937903 /* Enliven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enliven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F62EC642070456300937903 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F62EC652070456300937903 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +64,8 @@
 		9F62EC872070456300937903 /* EnlivenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnlivenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F62EC8B2070456300937903 /* EnlivenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnlivenUITests.m; sourceTree = "<group>"; };
 		9F62EC8D2070456300937903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD10A432072ADA7005F644D /* ModelQRManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelQRManagerProtocol.h; sourceTree = "<group>"; };
+		9FD10A442072ADA7005F644D /* ModelQRManagerProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelQRManagerProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1D84652072978900643E71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F1D84662072978900643E71 /* AccelerateProtocol.h */,
+				9F1D846B2072978900643E71 /* AccelerateProtocol.m */,
+				9F1D84672072978900643E71 /* MyQRManagedObject.h */,
+				9F1D846E2072978900643E71 /* sampleProtocol.h */,
+				9F1D846A2072978900643E71 /* sampleProtocol.m */,
+				9F1D846D2072978900643E71 /* sampleProtocolAVFoun.h */,
+				9F1D84682072978900643E71 /* sampleProtocolAVFoun.m */,
+				9FD10A432072ADA7005F644D /* ModelQRManagerProtocol.h */,
+				9FD10A442072ADA7005F644D /* ModelQRManagerProtocol.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9F62EC582070456300937903 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +132,7 @@
 		9F62EC632070456300937903 /* Enliven */ = {
 			isa = PBXGroup;
 			children = (
+				9F1D84652072978900643E71 /* Models */,
 				9F62EC642070456300937903 /* AppDelegate.h */,
 				9F62EC652070456300937903 /* AppDelegate.m */,
 				9F62EC672070456300937903 /* ViewController.h */,
@@ -269,9 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F62EC692070456300937903 /* ViewController.m in Sources */,
+				9F1D846F2072978900643E71 /* sampleProtocolAVFoun.m in Sources */,
 				9F62EC662070456300937903 /* AppDelegate.m in Sources */,
 				9F62EC772070456300937903 /* main.m in Sources */,
+				9FD10A452072ADA7005F644D /* ModelQRManagerProtocol.m in Sources */,
 				9F62EC6F2070456300937903 /* Enliven.xcdatamodeld in Sources */,
+				9F1D84702072978900643E71 /* sampleProtocol.m in Sources */,
+				9F1D84712072978900643E71 /* AccelerateProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +471,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z59E8EDBY;
 				INFOPLIST_FILE = Enliven/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kdr.Enliven;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kdr.enliven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,8 +486,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z59E8EDBY;
 				INFOPLIST_FILE = Enliven/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kdr.Enliven;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kdr.enliven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
