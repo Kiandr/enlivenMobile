@@ -32,6 +32,8 @@
 @property (nonatomic,strong) UIColor *detectedColour;
 @property (nonatomic, strong) UIImage *realtimeUIIMageFromMainView;
 @property (nonatomic, strong) UIButton *StartAgainbutton;
+@property (nonatomic, strong) NSString *PDF417String;
+
 
 
 
@@ -174,8 +176,11 @@ self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
             AVMetadataMachineReadableCodeObject *readableObject = (AVMetadataMachineReadableCodeObject *)[self.previewLayer transformedMetadataObjectForMetadataObject:metadataObject];
             BOOL foundMatch = readableObject.stringValue != nil;
             _qRDecodedString = readableObject.stringValue;
+            
+            //[self decodePDF417:readableObject.stringValue];
+            
             //_label.text = _qRDecodedString;
-            [self  printStringOnScreen: _qRDecodedString];
+            [self  printStringOnScreen: readableObject.stringValue];
             NSLog(@"%@",_qRDecodedString);
             NSArray *corners = readableObject.corners;
             
@@ -494,6 +499,53 @@ self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
 }
 
-
-@end
-
+-(NSString*)decodePDF417:(NSString*)barcodeString{
+    
+    NSString *message=barcodeString;
+    unichar province [2]= {'A','A'};
+    unichar city [13]= {'A','A','A','A','A','A','A','A','A','A','A','A','A','\n'};
+    unichar lastName [35]= {'A','A','A','A','A','A','A','A','A','A','A','A','A',
+        'A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A',
+        'A','A','A','A','A',
+        '\n'};
+    NSString *country = [[NSString alloc]init];
+    
+    
+    
+    
+    if ([message characterAtIndex:0] == '%'){
+        country = @"Canada";
+        [message getCharacters:province range:NSMakeRange(1, 2)];
+        [message getCharacters:city range:NSMakeRange(3, 16)];
+        [message getCharacters:lastName range:NSMakeRange(17, 52)];
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    //[message rangeOfString:povince options:NSLiteralSearch range:NSMakeRange(1, 2)];
+    //[message rangeOfString:lastName options:nil range:NSMakeRange(1, 32)];
+    
+    
+    
+    
+    
+     
+        
+    
+    
+    
+    _PDF417String = barcodeString;
+    return barcodeString;
+    
+}
+    
+   
+    
+    @end
+    
