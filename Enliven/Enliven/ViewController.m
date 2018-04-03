@@ -62,18 +62,18 @@
     // Dispose of any resources that can be recreated.
 }
 -(void) TakeScreenshotAndSaveToPhotoAlbum {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(window.bounds.size, NO, [UIScreen mainScreen].scale);
-    else
-        UIGraphicsBeginImageContext(window.bounds.size);
-    
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//
+//    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+//        UIGraphicsBeginImageContextWithOptions(window.bounds.size, NO, [UIScreen mainScreen].scale);
+//    else
+//        UIGraphicsBeginImageContext(window.bounds.size);
+//
+//    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//
+//    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 }
 
 - (void) barButtonCustomPressed:(id)sender {

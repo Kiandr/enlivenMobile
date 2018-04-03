@@ -177,10 +177,11 @@ self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
             BOOL foundMatch = readableObject.stringValue != nil;
             _qRDecodedString = readableObject.stringValue;
             
-            //[self decodePDF417:readableObject.stringValue];
+            
             
             //_label.text = _qRDecodedString;
-            [self  printStringOnScreen: readableObject.stringValue];
+            //[self  printStringOnScreen: readableObject.stringValue];
+            [self  printStringOnScreen: [self decodePDF417:readableObject.stringValue]];
             NSLog(@"%@",_qRDecodedString);
             NSArray *corners = readableObject.corners;
             
@@ -501,51 +502,269 @@ self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
 
 -(NSString*)decodePDF417:(NSString*)barcodeString{
     
-    NSString *message=barcodeString;
-    unichar province [2]= {'A','A'};
-    unichar city [13]= {'A','A','A','A','A','A','A','A','A','A','A','A','A','\n'};
-    unichar lastName [35]= {'A','A','A','A','A','A','A','A','A','A','A','A','A',
-        'A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A',
-        'A','A','A','A','A',
-        '\n'};
-    NSString *country = [[NSString alloc]init];
+
+    char *barcodeRaw = [barcodeString cString];
+    
+//    char barcodeRaw[] = "%BCNORTH VANCOUVDAVOUDI RAD,$KIAN^101-126 12TH ST E$NORTH VANCOUVER BC  V7L 2J5^?;6360289444385=230419860426=?_%0AV7L2J5                     M173 65BRNBRN9769626274                74($^*8QNLM?";
+    IDByteArray *byteArray =(IDByteArray*)malloc(sizeof(IDByteArray));
+    IDByte *idByte;// = (IDByte*)malloc(sizeof(IDByte));
+    IDByteLength  *idByteLength = (IDByteLength*)malloc(sizeof(IDByteLength));
+    idByte = returnLenOfString(barcodeRaw, Country, idByteLength);
+    byteArray->byteCountry = *idByte;
+    idByte = returnLenOfString(barcodeRaw, Province, idByteLength);
+    byteArray->byteProvince = *idByte;
+    idByte = returnLenOfString(barcodeRaw, City, idByteLength);
+    byteArray->byteCity = *idByte;
+    idByte = returnLenOfString(barcodeRaw, LastName, idByteLength);
+    byteArray->byteLastName = *idByte;
+    idByte = returnLenOfString(barcodeRaw, FirstName, idByteLength);
+    byteArray->byteFirstName = *idByte;
+    idByte = returnLenOfString(barcodeRaw, AddressLineOne, idByteLength);
+    byteArray->byteAddressLineOne = *idByte;
     
     
     
+    printf("Country Is Canada:\t");
     
-    if ([message characterAtIndex:0] == '%'){
-        country = @"Canada";
-        [message getCharacters:province range:NSMakeRange(1, 2)];
-        [message getCharacters:city range:NSMakeRange(3, 16)];
-        [message getCharacters:lastName range:NSMakeRange(17, 52)];
-        
+    char *stringCountry = (char*)malloc(sizeof(char)*byteArray->byteCountry.len);
+    for (int i = 0; i < byteArray->byteCountry.len; i++)
+    {
+        stringCountry[i] = byteArray->byteCountry.prtStart[i];
+        printf("%c", stringCountry[i]);
     }
+    printf("\n");
+    
+    
+    printf("Province Is:\t");
+    char *stringProvince = (char*)malloc(sizeof(char)*byteArray->byteProvince.len);
+    for (int i = 0; i < byteArray->byteProvince.len; i++)
+    {
+        stringProvince[i] = byteArray->byteProvince.prtStart[i];
+        printf("%c", stringProvince[i]);
+    }
+    printf("\n");
+    
+    printf("City Is:\t");
+    char *stringCity = (char*)malloc(sizeof(char)*byteArray->byteCity.len);
+    for (int i = 0; i < byteArray->byteCity.len; i++)
+    {
+        stringCity[i] = byteArray->byteCity.prtStart[i];
+        printf("%c", stringCity[i]);
+    }
+    printf("\n");
+    printf("FirstName Is:\t");
+    char *stringFirstName = (char*)malloc(sizeof(char)*byteArray->byteFirstName.len);
+    for (int i = 0; i < byteArray->byteFirstName.len; i++)
+    {
+        stringFirstName[i] = byteArray->byteFirstName.prtStart[i];
+        printf("%c", stringFirstName[i]);
+    }
+    printf("\n");
+    
+    printf("LastName Is:\t");
+    char *stringLastName = (char*)malloc(sizeof(char)*byteArray->byteLastName.len);
+    for (int i = 0; i < byteArray->byteLastName.len; i++)
+    {
+        stringLastName[i] = byteArray->byteLastName.prtStart[i];
+        printf("%c", stringLastName[i]);
+    }
+    printf("\n");
+    
+    printf("Address on line One:\t");
+    char *stringAddressOne = (char*)malloc(sizeof(char)*byteArray->byteAddressLineOne.len);
+    for (int i = 0; i < byteArray->byteAddressLineOne.len; i++)
+    {
+        stringAddressOne[i] = byteArray->byteAddressLineOne.prtStart[i];
+        printf("%c", stringAddressOne[i]);
+    }
+    printf("\n");
+    
+    
+    NSString *NSCountry = [[NSString alloc] initWithUTF8String:stringCountry];
+    NSString *NSProvince = [[NSString alloc] initWithUTF8String:stringProvince];
+    NSString *NSCity = [[NSString alloc] initWithUTF8String:stringCity];
+    NSString *NSFirstName = [[NSString alloc] initWithUTF8String:stringFirstName];
+    NSString *NSLastname = [[NSString alloc] initWithUTF8String:stringLastName];
+    NSString *NSAddressLineONe = [[NSString alloc] initWithUTF8String:stringAddressOne];
     
     
     
+    NSArray *myStrings = [[NSArray alloc] initWithObjects:[NSString stringWithFormat: @"Country = %@ ", NSCountry], [NSString stringWithFormat: @"Province = %@ ", NSProvince], [NSString stringWithFormat: @"City = %@ ", NSCity], [NSString stringWithFormat: @"First Name = %@ ", NSFirstName], [NSString stringWithFormat: @"Last Name = %@ ",NSLastname], [NSString stringWithFormat: @"Address = %@ ", NSAddressLineONe], nil];
+    NSString *joinedString = [myStrings componentsJoinedByString:@" "];
     
     
-    
-    
-    
-    //[message rangeOfString:povince options:NSLiteralSearch range:NSMakeRange(1, 2)];
-    //[message rangeOfString:lastName options:nil range:NSMakeRange(1, 32)];
-    
-    
-    
-    
-    
-     
-        
-    
-    
-    
-    _PDF417String = barcodeString;
-    return barcodeString;
+    //NSString *stringCountry = [byteArray->byteCountry.prtStart substringWithRange:NSMakeRange(0, byteArray->byteCountry.len)];
+//    NSString *stringProvince = [barcodeString substringWithRange:NSMakeRange(byteArray->byteProvince.prtStart, byteArray->byteProvince.len)];
+//    NSString *stringCity = [barcodeString substringWithRange:NSMakeRange(byteArray->byteCity.prtStart, byteArray->byteCity.len)];
+//    NSString *stringLastName = [barcodeString substringWithRange:NSMakeRange(byteArray->byteLastName.prtStart, byteArray->byteLastName.len)];
+//    NSString *stringFirstName = [barcodeString substringWithRange:NSMakeRange(byteArray->byteFirstName.prtStart, byteArray->byteFirstName.len)];
+//    NSString *stringAddressLineOne = [barcodeString substringWithRange:NSMakeRange(byteArray->byteAddressLineOne.prtStart, byteArray->byteAddressLineOne.len)];
+//    _PDF417String = barcodeString;
+    return joinedString;
     
 }
+
+
+
+typedef struct IDByte {
+    char *prtStart;
+    char *prtEnd;
+    int len;
+}IDByte;
+
+typedef struct IDByteArray{
+    IDByte byteCountry;
+    IDByte byteProvince;
+    IDByte byteCity;
+    IDByte byteLastName;
+    IDByte byteFirstName;
+    IDByte byteAddressLineOne;
+    IDByte byteAddressLineTwo;
+}IDByteArray;
+
+typedef struct IDByteLength {
+    int lenCountry;
+    int lenProvince;
+    int lenCity;
+    int lenLastName;
+    int lenFirstName;
+    int lenAddressLineOne;
+    int lenAddressLineTwo;
+}IDByteLength;
+
+enum dataType { Country, Province, City, LastName, FirstName, AddressLineOne, AddressLineTwo };
+IDByte *returnLenOfString(char  *prtToHeaderLocation, enum dataType type, IDByteLength  *incomingIdByteLength) {
     
-   
+    char *prtH = prtToHeaderLocation;
+    IDByte *idByte = (IDByte*) malloc(sizeof(IDByte));
+    IDByteLength  *idByteLength = incomingIdByteLength;//(IDByteLength*)malloc(sizeof(IDByteLength));
+    int localCounter = 0;
+    if (prtToHeaderLocation == NULL)
+        return idByte;
+    
+    
+    switch (type)
+    {
+        case Country:
+        {
+            localCounter = 0;
+            idByte->len = 1;
+            idByteLength->lenCountry = idByte->len;
+            idByte->prtStart = prtToHeaderLocation + 0;
+            idByte->prtEnd = prtToHeaderLocation + 0;
+            break;
+        }
+        case Province:
+        {
+            int localCounter = 0;
+            idByte->len = 2;
+            idByte->prtStart = prtToHeaderLocation + 1;
+            idByte->prtEnd = prtToHeaderLocation + 2;
+            idByteLength->lenProvince = idByte->len;
+            break;
+        }
+        case City:
+        {
+            localCounter = 0;
+            char *prtF = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince;
+            char *prtS = prtF;
+            int localCounter = 0;
+            while (*prtF != '^' && (localCounter >= 0 && localCounter < 13))
+            {
+                localCounter++;
+                prtF++;
+            }
+            
+            idByte->len = localCounter;
+            idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince;
+            idByte->prtEnd = prtF;
+            idByteLength->lenCity = localCounter;
+            break;
+        }
+        case LastName:
+        {
+            localCounter = 0;
+            char *prtF = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity;
+            char *prtS = prtF;
+            int localCounter = 0;
+            while (*prtF != '$' && (localCounter >= 0 && localCounter<35))
+            {
+                localCounter++;
+                prtF++;
+            }
+            
+            idByte->len = localCounter;
+            idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity;
+            idByte->prtEnd = prtF;
+            idByteLength->lenLastName = localCounter;
+            
+            break;
+        }
+        case FirstName:
+        {
+            localCounter = 0;
+            bool x = false;
+            char *prtF = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity +idByteLength->lenLastName;
+            if (*prtF == '$') {
+                prtF++;
+                x = true;
+            }
+            char const *prtS = prtF;
+            int localCounter = 0;
+            while (*prtF != '$' &&*prtF != '^' && (localCounter >= 0 && localCounter<(35- idByteLength->lenLastName)))
+            {
+                localCounter++;
+                prtF++;
+            }
+            
+            idByte->len = localCounter;
+            if (!x)
+                idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + idByteLength->lenLastName;
+            else
+                idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + (idByteLength->lenLastName + 1);
+            
+            idByte->prtEnd = prtF;
+            idByteLength->lenFirstName = localCounter;
+            
+            break;
+        }
+        case AddressLineOne:
+        {
+            localCounter = 0;
+            bool x = false;
+            char *prtF = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + idByteLength->lenLastName + idByteLength->lenFirstName+1;
+            if (*prtF == '^') {
+                prtF++;
+                x = true;
+            }
+            char const *prtS = prtF;
+            int localCounter = 0;
+            while (*prtF != '$' &&*prtF != '^' && (localCounter >= 0 && localCounter<(29)))
+            {
+                localCounter++;
+                prtF++;
+            }
+            
+            idByte->len = localCounter;
+            if (!x)
+                idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + idByteLength->lenLastName + idByteLength->lenFirstName;//prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + idByteLength->lenLastName;
+            else
+                idByte->prtStart = prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + idByteLength->lenLastName + (idByteLength->lenFirstName +2);//prtToHeaderLocation + idByteLength->lenCountry + idByteLength->lenProvince + idByteLength->lenCity + (idByteLength->lenLastName + 1);
+            
+            idByte->prtEnd = prtF;
+            idByteLength->lenAddressLineOne = localCounter;
+            
+            break;
+        }
+        case AddressLineTwo:
+            break;
+        default:
+            break;
+    }
+    
+    return idByte;
+    
+}
     
     @end
     
